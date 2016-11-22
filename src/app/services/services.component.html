@@ -1,0 +1,73 @@
+<div class="services" id="services">
+
+  <div class="row" >
+    <div class="col-sm-2 col-sm-offset-2 col-xs-6">
+      <img src="images/web.fw.png" (click)="changeText(1)"><br><br>
+      <h5>WEB DESIGN</h5>
+      <img src="images/under.fw.png">
+    </div>
+    <div class="col-sm-2 col-xs-6">
+      <img src="images/graph.fw.png" (click)="changeText(2)"><br><br>
+      <h5>GRAPHIC DESIGN</h5>
+      <img src="images/under.fw.png">
+    </div>
+    <div class="col-sm-2 col-xs-6">
+      <img src="images/prog.fw.png" (click)="changeText(3)"><br><br>
+      <h5>PROGRAMMING</h5>
+      <img src="images/under.fw.png">
+    </div>
+    <div class="col-sm-2 col-xs-6">
+      <img src="images/phot.fw.png" (click)="changeText(4)"><br><br>
+      <h5>PHOTOGRAPHY</h5>
+      <img src="images/under.fw.png">
+    </div>
+  </div>
+
+  <div class="row" [ngSwitch]="textVal">
+    <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+      <hr>
+      <span *ngSwitchCase="1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Curabitur vulputate, lorem in fringilla porta, odio odio posuere velit, condimentum consequat ligula sapien ut ex. Maecenas commodo ex sed.
+          </span>
+      <span *ngSwitchCase="2">
+          In diam quam, vestibulum et tempus et, aliquet sed odio. Etiam tincidunt erat ac aliquet tincidunt. Sed ipsum enim, varius vehicula ligula quis, lobortis condimentum erat. Nam non imperdiet nulla, vitae blandit turpis. Fusce quis dolor non diam sagittis mattis at vitae justo. Suspendisse blandit, nulla et vulputate consectetur, urna libero porta nisi, eu porta nunc nibh ac lacus.
+          </span>
+      <span *ngSwitchCase="3">
+          Pellentesque pretium ipsum diam, sed semper sapien vehicula ac. Nulla semper urna a pharetra fringilla. Praesent quis turpis id orci venenatis ullamcorper. Nam a placerat sapien. Nam lacinia risus eget erat hendrerit, a sodales leo malesuada. Vestibulum bibendum mattis facilisis. Pellentesque blandit tortor eu erat mollis pharetra. Duis at tristique magna, eu placerat orci.
+          </span>
+      <span *ngSwitchCase="4">
+          Duis pretium velit eget elementum pellentesque. Fusce aliquet vitae ipsum eget tincidunt. Ut nulla felis, aliquet eget placerat sed, interdum suscipit turpis. Donec velit ante, euismod in nibh vitae, vestibulum pharetra justo. Sed nec neque id velit porttitor ornare. Sed fermentum nulla ex, quis fringilla erat lobortis nec. Duis nec congue lacus. Cras augue arcu, sodales sit amet auctor eu.
+          </span>
+      <span *ngSwitchDefault>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Curabitur vulputate, lorem in fringilla porta, odio odio posuere velit, condimentum consequat ligula sapien ut ex. Maecenas commodo ex sed.
+          </span>
+    </div>
+  </div>
+
+</div>
+
+<div class="services" id="getnow">
+
+  <div class="row" id="start">
+    <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+      <h5>START TOUR</h5>
+    </div>
+    <div class="col-xs-6 col-sm-4">
+      <h5>FOR ALL DEVICES</h5>
+    </div>
+  </div>
+
+  <div class="row text_left">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+      <img class="img-responsive" src="images/iphones.png">
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <h2>Fully Responsive</h2><br>
+      <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Maecenas commodo ex sed odio ultrices porta.
+          </span><br><br>
+      <a href="#cont_anch" offset="50" scroll-to="cont_anch"><button class="btn butt black">GET NOW</button></a>
+    </div>
+  </div>
+
+</div>
