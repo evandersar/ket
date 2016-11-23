@@ -1,0 +1,36 @@
+<div class="services" id="news">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+      <h2>Check our news</h2>
+      <img src="images/mid_und.fw.png"><br><br>
+      <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan.
+          </span>
+    </div>
+  </div><br><br><br>
+
+
+  <!--<div class="row" id="news_desc" ng-repeat='item in news | orderBy : sortFunc : true | limitTo : 4 '>
+    <div class="col-sm-1 col-sm-offset-3 col-xs-3">
+      <h1>{{item.date.split('/')[1]}}</h1>
+      <span>{{monthNames[(item.date.split('/')[0] - 1)]}}</span>
+    </div>
+    <div class="col-sm-5 col-xs-8 text_left">
+      <span>{{item.text}}</span>
+      <a href="{{item.id}}.html" target="_blank"><h5>Read More</h5></a>
+      <hr>
+    </div>
+  </div>-->
+
+  <div *ngFor="let article of articles"
+      (click)="onSelect(article)">
+
+    <span>{{article.id}}</span>
+    <span>{{article.text}}</span>
+    <span>{{article.date}}</span>
+
+  </div>
+
+
+</div>

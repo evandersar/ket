@@ -12,6 +12,8 @@ import { SliderComponent } from './slider/slider.component';
 
 import { Ng2PageScrollModule } from "ng2-page-scroll";
 import { AboutComponent } from './about/about.component';
+import { NewsComponent } from './news/news.component';
+import { NewsService } from "./news.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AboutComponent } from './about/about.component';
     NavigationComponent,
     ServicesComponent,
     SliderComponent,
-    AboutComponent
+    AboutComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { AboutComponent } from './about/about.component';
     Ng2PageScrollModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
