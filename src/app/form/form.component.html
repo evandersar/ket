@@ -11,41 +11,45 @@
   </div><br><br><br>
 
   <div class="row" id="form_inputs">
-    <form name="myForm" class="form-horizontal">
-      <fieldset>
 
-        <div class="row">
+      <form name="myForm" class="form-horizontal" (ngSubmit)="makeCookie()" [formGroup]="userForm">
 
-          <div class="col-sm-3 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-            <input type="text" class="form-control" id="inputName" placeholder="Your name here" >
-            <span >Only letters allowed!</span>
+        <fieldset>
 
+          <div class="row">
+
+            <div class="col-sm-3 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+              <input type="text" class="form-control" placeholder="Your name here" formControlName="name">
+              <span *ngIf="userForm.get('name').hasError('pattern')">Only letters allowed!</span>
+              <span *ngIf="!userForm.get('name').hasError('pattern')" style ="color: #121215;">Only letters allowed!</span>
+            </div>
+
+            <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+              <input type="text" class="form-control" placeholder="Your mail here" formControlName="mail">
+              <span *ngIf="userForm.get('mail').hasError('pattern')">Letters, numbers, @, _, ., allowed!</span>
+              <span *ngIf="!userForm.get('mail').hasError('pattern')" style ="color: #121215;">Letters, numbers, @, _, ., allowed!</span>
+            </div>
+
+          </div><br><br>
+
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+              <input type="text" class="form-control" placeholder="Your message here" formControlName="message">
+              <span *ngIf="userForm.get('message').hasError('minlength')">Minimal length of message 10 symbols!</span>
+              <span *ngIf="!userForm.get('message').hasError('minlength')" style ="color: #121215;">Minimal length of message 10 symbols!</span>
+            </div>
           </div>
 
-          <div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-            <input type="text" class="form-control" id="inputMail" placeholder="Your mail here" >
-            <span >Letters, numbers, @, _, ., allowed!</span>
-
+          <div class="row">
+            <div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-3">
+              <button type="submit" class="btn butt" id='btn' [disabled]="!userForm.valid">Send Message</button><br><br>
+            </div>
           </div>
 
-        </div><br><br>
+        </fieldset>
 
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-            <input type="text" class="form-control" id="inputSubject" placeholder="Your message here" >
-            <span >Minimal length of message 20 symbols!</span>
+      </form>
 
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-3">
-            <button type="submit" class="btn butt" id='btn' ng-click="makeCookie()">Send Message</button><br><br>
-          </div>
-        </div>
-
-      </fieldset>
-    </form>
   </div>
 
 </div>

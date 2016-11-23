@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 import { SliderComponent } from './slider/slider.component';
 
 import { Ng2PageScrollModule } from "ng2-page-scroll";
+
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Ng2PageScrollModule } from "ng2-page-scroll";
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2PageScrollModule.forRoot()
+    Ng2PageScrollModule.forRoot(),
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
