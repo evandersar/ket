@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Component({
