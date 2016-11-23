@@ -12,7 +12,6 @@ import { SliderComponent } from './slider/slider.component';
 
 import { Ng2PageScrollModule } from "ng2-page-scroll";
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +26,7 @@ import { Ng2PageScrollModule } from "ng2-page-scroll";
     FormsModule,
     HttpModule,
     Ng2PageScrollModule.forRoot(),
-      ReactiveFormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
