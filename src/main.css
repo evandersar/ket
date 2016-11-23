@@ -144,18 +144,62 @@ h1{
 	border-right: 20px solid white;
 	padding: 0;
 }
-#teammates a>img{
-	padding: 0;
-	border: 1px solid white;
-	margin-bottom: 2px;
-	margin-top: 20px;
-}
 #teammates a{
 	display: inline-block;
+	padding: 0;
+	border: 1px solid dimgrey;
+	margin-bottom: 2px;
+	margin-top: 10px;
 }
 #teammates div>img{
 	margin-bottom: 20px;
+	display: inline;
 }
+
+.twitt {
+	width: 44px;
+	height: 42px;
+	display:block;
+	background:transparent url('images/t.fw.png') center top no-repeat;
+}
+
+.twitt:hover {
+	background-image: url('images/tw.fw.png');
+}
+
+.face {
+	width: 44px;
+	height: 42px;
+	display:block;
+	background:transparent url('images/f.fw.png') center top no-repeat;
+}
+
+.face:hover {
+	background-image: url('images/fa.fw.png');
+}
+
+.googl {
+	width: 44px;
+	height: 42px;
+	display:block;
+	background:transparent url('images/g.fw.png') center top no-repeat;
+}
+
+.googl:hover {
+	background-image: url('images/go.fw.png');
+}
+
+.dribl {
+	width: 44px;
+	height: 42px;
+	display:block;
+	background:transparent url('images/d.fw.png') center top no-repeat;
+}
+
+.dribl:hover {
+	background-image: url('images/dr.fw.png');
+}
+
 .inslide{
 	color: #FFF;
 	text-align: center;

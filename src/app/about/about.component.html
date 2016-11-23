@@ -1,0 +1,21 @@
+<div class="services" id="team">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+      <h2>We are the one</h2>
+      <img src="images/mid_und.fw.png"><br><br>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan.
+      </span>
+    </div>
+  </div>
+
+  <div class="row" id="teammates">
+    <div *ngFor="let member of team" class="{{member.clas}}">
+      <img class="img-responsive" src="{{member.source}}"><br/>
+      <div style="width: 70%; display: inline-block;"><span>Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus.</span></div><br/>
+      <a class="face"></a>  <a class="twitt"></a> <a class="googl"></a> <a class="dribl"></a>
+    </div>
+  </div>
+
+</div>

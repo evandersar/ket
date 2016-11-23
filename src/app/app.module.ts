@@ -11,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 import { SliderComponent } from './slider/slider.component';
 
 import { Ng2PageScrollModule } from "ng2-page-scroll";
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Ng2PageScrollModule } from "ng2-page-scroll";
     FormComponent,
     NavigationComponent,
     ServicesComponent,
-    SliderComponent
+    SliderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
