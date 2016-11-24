@@ -34,7 +34,7 @@
       <div class='row portf_gall'>
 
         <div *ngFor="let img of images | categoryPipe:category" class = 'col-sm-2 col-xs-4'>
-          <div on-mouseleave="hide($event)" class='mask' style="visibility: hidden"><span>{{img.category}}</span></div> <!--[hidden]="isHidden" [style.visibility]="hid"-->
+          <div on-mouseleave="hide($event)" class='mask' style="visibility: hidden"><span>{{img.category}}</span></div> <!-- [hidden]="isHidden" [style.visibility]="hid"-->
           <img on-mouseover="show($event)" class="img-responsive" src={{img.path}}>
         </div>
 
