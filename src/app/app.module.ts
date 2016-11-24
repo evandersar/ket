@@ -14,6 +14,9 @@ import { Ng2PageScrollModule } from "ng2-page-scroll";
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { NewsService } from "./news.service";
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { CategoryPipePipe } from './category-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { NewsService } from "./news.service";
     ServicesComponent,
     SliderComponent,
     AboutComponent,
-    NewsComponent
+    NewsComponent,
+    PortfolioComponent,
+    StatisticsComponent,
+    CategoryPipePipe
   ],
   imports: [
     BrowserModule,

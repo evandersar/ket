@@ -1,0 +1,46 @@
+<div class="services" id="portf_head">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+      <h2>Our Portfolio</h2>
+      <img src="images/mid_und.fw.png"><br><br>
+      <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan.
+          </span>
+    </div>
+  </div>
+
+  <div class="row" id='filter'>
+    <div class="col-sm-2 col-sm-offset-2 col-xs-3" (click)='catChanger("All")'>
+      <h5>ALL</h5>
+    </div>
+
+    <div class="col-sm-2 col-xs-3" (click)='catChanger("Web")'>
+      <h5>WEB</h5>
+    </div>
+
+    <div class="col-sm-2 col-xs-3" (click)='catChanger("Photography")'>
+      <h5>PHOTOGRAPHY</h5>
+    </div>
+
+    <div class="col-sm-2 col-xs-3" (click)='catChanger("Graphic design")'>
+      <h5>GRAPHIC DESIGN</h5>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="portf_images">
+
+    <div id='allImages'>
+      <div class='row portf_gall'>
+
+        <div *ngFor="let img of images | categoryPipe:category" class = 'col-sm-2 col-xs-4'>
+          <div  class='mask'><span>{{img.category}}</span></div>
+          <img  class="img-responsive" src={{img.path}} >
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
