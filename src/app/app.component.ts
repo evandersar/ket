@@ -7,8 +7,10 @@ import { PageScrollConfig } from "ng2-page-scroll";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   constructor(){
     PageScrollConfig.defaultScrollOffset = 50;
     PageScrollConfig.defaultDuration = 1000;
   }
+
 }

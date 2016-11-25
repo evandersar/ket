@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  /*startAnime(reachedTarget: boolean): void {
+
+    if (reachedTarget) {
+      console.log('Yeah, we reached our destination');
+    } else {
+      console.log('Ohoh, something interrupted us');
+    }
+
+  }*/
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }
