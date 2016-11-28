@@ -1,18 +1,16 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import {Counto} from 'angular2-counto/angular2-counto';
 
 @Component({
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
   styleUrls: ['./statistics.component.css'],
-  host: {'(window:scroll)': 'startAnime($event)'},
+  host: {'(window:scroll)': 'onScroll($event)'}
 })
 export class StatisticsComponent implements OnInit {
 
   isScrolled = false;
   currPos: Number = 0;
-  startPos: Number = 0;
-  changePos: Number = this._el.nativeElement.offsetTop;
+  changePos: Number = 0;
 
   projects: number = 0;
   clicks: number = 0;
@@ -24,34 +22,31 @@ export class StatisticsComponent implements OnInit {
   ngOnInit() {
   }
 
-  startAnime(evt){
-    this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
+  onScroll(evt){
+    //console.log(this.isScrolled);
 
-    if(this.currPos >= this.changePos ) {
-      this.isScrolled = true;
+    this.changePos = this._el.nativeElement.offsetTop + 200;
+    this.currPos = (window.pageYOffset + document.documentElement.clientHeight); // + document.documentElement.clientHeight
+
+    //console.log('this.currPos', this.currPos);
+    //console.log('this.changePos', this.changePos);
+
+    if(this.currPos >= this.changePos && !this.isScrolled ) {
 
       this.projects = 3054;
       this.clicks = 7234873;
       this.mails = 4670;
       this.jokes = 939;
 
-      this.anime();
+      this.isScrolled = true;
 
-      console.log(this.isScrolled);
-    } else {
-      this.isScrolled = false;
-
-      this.projects = 0;
-      this.clicks = 0;
-      this.mails = 0;
-      this.jokes = 0;
-
-      console.log(this.isScrolled);
+      //alert(this.isScrolled);
     }
+
   }
 
-  anime(){
-    setTimeout(console.log('Привет'), 1000);
+  getPos(e){
+    console.log(e);
   }
 
 }

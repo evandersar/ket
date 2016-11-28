@@ -18,6 +18,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CategoryPipePipe } from './category-pipe.pipe';
 
+import {Counto} from 'angular2-counto/angular2-counto';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { CategoryPipePipe } from './category-pipe.pipe';
     NewsComponent,
     PortfolioComponent,
     StatisticsComponent,
-    CategoryPipePipe
+    CategoryPipePipe,
+    Counto
   ],
   imports: [
     BrowserModule,
