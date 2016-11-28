@@ -26,7 +26,7 @@ export class StatisticsComponent implements OnInit {
     //console.log(this.isScrolled);
 
     this.changePos = this._el.nativeElement.offsetTop + 200;
-    this.currPos = (window.pageYOffset + document.documentElement.clientHeight); // + document.documentElement.clientHeight
+    this.currPos = (window.pageYOffset + document.documentElement.clientHeight);
 
     //console.log('this.currPos', this.currPos);
     //console.log('this.changePos', this.changePos);
