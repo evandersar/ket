@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from "../article";
 import { NewsService } from "../news.service";
 
 @Component({
@@ -10,17 +9,19 @@ import { NewsService } from "../news.service";
 
 export class NewsComponent implements OnInit {
 
-  articles: Article[];
+  articles;
+  monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
     this.getNews();
-    console.log(this.articles);
+    //console.log(this.articles);
   }
 
   getNews(): void {
-    this.newsService.getNews().then(articles => this.articles = articles);
+    //noinspection TypeScriptValidateTypes
+    this.articles = this.newsService.getNews();
   }
 
 }
