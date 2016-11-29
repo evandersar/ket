@@ -45,16 +45,16 @@ export class OrderByPipe implements PipeTransform {
             ? propertyToCheck.substr(1)
             : propertyToCheck;
 
-        return input.sort(function(a:any,b:any){
+        return input.sort( (a:any,b:any) => {
           return !desc
               ? OrderByPipe._orderByComparator(a[property], b[property])
-                  : -OrderByPipe._orderByComparator(a[property], b[property]);
+              : -OrderByPipe._orderByComparator(a[property], b[property]);
         });
       }
     }
     else {
       //Loop over property of the array in order and sort
-      return input.sort(function(a:any,b:any){
+      return input.sort( (a:any,b:any) => {
         for(let i:number = 0; i < config.length; i++){
           let desc = config[i].substr(0, 1) == '-';
           let property = config[i].substr(0, 1) == '+' || config[i].substr(0, 1) == '-'
