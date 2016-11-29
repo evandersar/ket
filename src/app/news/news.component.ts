@@ -22,6 +22,7 @@ export class NewsComponent implements OnInit {
   getNews(): void {
     //noinspection TypeScriptValidateTypes
     this.articles = this.newsService.getNews();
+    //console.log(this.articles);
   }
 
 }

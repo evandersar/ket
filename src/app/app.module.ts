@@ -19,6 +19,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { CategoryPipePipe } from './category-pipe.pipe';
 
 import {Counto} from 'angular2-counto/angular2-counto';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {Counto} from 'angular2-counto/angular2-counto';
     PortfolioComponent,
     StatisticsComponent,
     CategoryPipePipe,
-    Counto
+    Counto,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
