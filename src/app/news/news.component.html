@@ -12,17 +12,16 @@
 
 
   <div class="row" id="news_desc"
-       *ngFor="let article of articles | async | orderBy: ['-date']; let i=index"
-      (click)="onSelect(article)">
+       *ngFor="let article of articles | async | orderBy: ['-date']; let i=index">
 
-          <div class="col-sm-1 col-sm-offset-3 col-xs-3" *ngIf="i<5">
+          <div class="col-sm-1 col-sm-offset-3 col-xs-3" *ngIf="i<limit">
             <h1>{{article.date.split('/')[1]}}</h1>
             <span>{{monthNames[(article.date.split('/')[0] - 1)]}}</span>
           </div>
 
-          <div class="col-sm-5 col-xs-8 text_left" *ngIf="i<5">
+          <div class="col-sm-5 col-xs-8 text_left" *ngIf="i<limit">
             <span>{{article.text}}</span>
-            <a href="{{article.id}}.html" target="_blank"><h5>Read More</h5></a>
+            <a><h5 (click)="onSelect(article)">Read More</h5></a>
             <hr>
           </div>
 

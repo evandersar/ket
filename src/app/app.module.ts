@@ -20,6 +20,9 @@ import { CategoryPipePipe } from './category-pipe.pipe';
 
 import {Counto} from 'angular2-counto/angular2-counto';
 import { OrderByPipe } from './order-by.pipe';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 @NgModule({
   declarations: [
@@ -35,14 +38,17 @@ import { OrderByPipe } from './order-by.pipe';
     StatisticsComponent,
     CategoryPipePipe,
     Counto,
-    OrderByPipe
+    OrderByPipe,
+    NewsDetailComponent,
+    AppRoutingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     Ng2PageScrollModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

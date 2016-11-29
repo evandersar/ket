@@ -1,0 +1,26 @@
+<div class="services" id="news">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+      <h2>Check our news</h2>
+      <img src="images/mid_und.fw.png"><br><br>
+      <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan.
+      </span>
+    </div>
+  </div><br><br><br>
+
+  <div *ngIf="article" class="row">
+
+    <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+
+        <h2 class="text_left">{{article.date}}</h2>
+        <h3>{{article.text}}</h3><br>
+        <span>{{article.description}}</span><br><br>
+        <button class="btn butt black" (click)="goBack()">Back to all news</button>
+
+    </div>
+
+  </div>
+
+</div>
