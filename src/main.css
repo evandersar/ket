@@ -215,6 +215,7 @@ h1{
 #news_desc h5{
 	text-align: right;
 	margin: 40px 0 0;
+	cursor: pointer;
 }
 #news_desc a{
 	text-decoration: none;

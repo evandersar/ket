@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -23,6 +23,7 @@ import { OrderByPipe } from './order-by.pipe';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { AppRoutingComponent } from './app-routing/app-routing.component';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
+import { EmptyComponent } from './empty/empty.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     Counto,
     OrderByPipe,
     NewsDetailComponent,
-    AppRoutingComponent
+    AppRoutingComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,10 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [NewsService],
+  providers: [
+      NewsService,
+    { provide: LOCALE_ID, useValue: "uk-UA" },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
