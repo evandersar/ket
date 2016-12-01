@@ -8,11 +8,15 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan.
           </span>
     </div>
-  </div><br><br><br>
+  </div><br>
+
+  <div *ngIf="!submitted" style ="color: #121215;"><h3>Your message is sent!</h3></div>
+  <div *ngIf="submitted" style ="color: #00E0FF;"><h3>Your message is sent!</h3></div>
+  <br>
 
   <div class="row" id="form_inputs">
 
-      <form name="myForm" class="form-horizontal" (ngSubmit)="makeCookie()" [formGroup]="userForm">
+      <form name="myForm" class="form-horizontal" (ngSubmit)="onSubmit()" [formGroup]="userForm">
 
         <fieldset>
 
