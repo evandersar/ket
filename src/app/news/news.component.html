@@ -21,12 +21,13 @@
 
           <div class="col-sm-5 col-xs-8 text_left" *ngIf="i<limit">
             <span>{{article.text}}</span>
-            <a><h5 (click)="onSelect(article)">Read More</h5></a>
+            <a><h5 (click)="onSelect(article)" pageScroll href="#article_anch">Read More</h5></a>
             <hr>
           </div>
 
   </div>
 
+    <a name="article_anch" id="article_anch"></a>
     <router-outlet></router-outlet>
 
 </div>

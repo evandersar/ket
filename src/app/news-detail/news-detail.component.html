@@ -17,7 +17,8 @@
         <h4 class="text_left">{{article.date}}</h4>
         <h3>{{article.text}}</h3><br>
         <span>{{article.description}}</span><br><br>
-        <button class="btn butt black" (click)="goBack()">Hide description</button>
+        <a class="btn butt black" (click)="goBack()" pageScroll href="#news_anch">Hide description</a>
+        <a class="btn butt black" pageScroll href="#news_anch">Back to all news</a>
 
     </div>
 

@@ -36,7 +36,7 @@ export class NewsDetailComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/']);
+    setTimeout(()=>{this.router.navigate(['/']);}, 1350)
   }
 
 }
