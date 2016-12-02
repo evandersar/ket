@@ -35,5 +35,4 @@ export class NewsComponent implements OnInit {
     this.router.navigate(['/news', article.id]);
   }
 
-
 }
