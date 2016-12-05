@@ -24,6 +24,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { AppRoutingComponent } from './app-routing/app-routing.component';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { EmptyComponent } from './empty/empty.component';
+import { LimitToPipe } from './limit-to.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EmptyComponent } from './empty/empty.component';
     OrderByPipe,
     NewsDetailComponent,
     AppRoutingComponent,
-    EmptyComponent
+    EmptyComponent,
+    LimitToPipe
   ],
   imports: [
     BrowserModule,

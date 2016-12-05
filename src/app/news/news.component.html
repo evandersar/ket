@@ -12,7 +12,7 @@
 
 
   <div class="row" id="news_desc"
-       *ngFor="let article of articles | async | orderBy: ['-date']; let i=index">
+       *ngFor="let article of articles | async | orderBy: ['-date'] | limitTo: 4; let i=index">
 
       <template [ngIf]="i<limit">
 

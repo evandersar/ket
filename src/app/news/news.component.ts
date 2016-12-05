@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
 export class NewsComponent implements OnInit {
 
   articles;
-  limit: number = 4;
+  limit: number = 5;
   monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
   constructor(
