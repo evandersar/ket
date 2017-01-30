@@ -1,6 +1,6 @@
 # Ket
 
-*Demo version* - [evandersar.github.io/ket](evandersar.github.io/ket)
+*Demo version* - [evandersar.github.io/ket](https://evandersar.github.io/ket/)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
